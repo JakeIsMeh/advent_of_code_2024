@@ -44,6 +44,7 @@ fn main() -> Result<(), std::io::Error> {
     }
 
     match day {
+        1 => day1::solve(part, &path),
         _ => println!("Day not implemented."),
     }
 
