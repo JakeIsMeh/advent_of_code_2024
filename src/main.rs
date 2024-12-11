@@ -33,7 +33,7 @@ fn main() -> Result<(), std::io::Error> {
     let part = *(matches.get_one::<i32>("part").expect("part is missing"));
     let path: String;
 
-    if let Ok(Some(p)) = matches.try_get_one::<PathBuf>("file") {
+    if let Ok(Some(p)) = matches.try_get_one::<PathBuf>("data") {
         path = p.to_string_lossy().to_string();
     } else {
         path = format!("./data/day{}.txt", day);
