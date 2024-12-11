@@ -50,6 +50,8 @@
 use std::fs::read_to_string;
 
 pub fn solve(part: i32, data_path: &str) {
+    println!("Solving Day 2...");
+
     let mut data: Vec<Vec<i32>> = Vec::new();
     for line in read_to_string(data_path).unwrap().lines() {
         let line_parse_itor = line

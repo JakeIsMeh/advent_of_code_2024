@@ -58,6 +58,8 @@
 use std::{array::from_fn, fs::read_to_string};
 
 pub fn solve(part: i32, data_path: &str) {
+    println!("Solving Day 1...");
+
     let mut lhs = Vec::<i32>::new();
     let mut rhs = Vec::<i32>::new();
 
