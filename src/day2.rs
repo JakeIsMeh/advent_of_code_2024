@@ -93,7 +93,7 @@ pub fn solve(part: i32, data_path: &str) {
     }
 }
 
-fn part1_line(data: &Vec<i32>) -> bool {
+fn part1_line(data: &[i32]) -> bool {
     let initial_dir = (data[1] - data[0]).signum();
 
     // 0 means the first two levels don't differ, which is unsafe.
@@ -101,7 +101,6 @@ fn part1_line(data: &Vec<i32>) -> bool {
         return false;
     }
 
-    let mut safe = 1;
     // starts from 0 so that first number delta is checked
     for i in 0..(data.len() - 1) {
         let delta = (data[i + 1] - data[i]) * initial_dir;
@@ -113,9 +112,9 @@ fn part1_line(data: &Vec<i32>) -> bool {
     return true;
 }
 
-fn part2_line(data: &Vec<i32>) -> bool {
+fn part2_line(data: &[i32]) -> bool {
     for i in 0..data.len() {
-        let mut tmp = data.clone();
+        let mut tmp = data.to_vec();
         tmp.remove(i);
         if (part1_line(&tmp)) {
             return true;
