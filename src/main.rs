@@ -4,6 +4,7 @@ use clap::{arg, value_parser, Command};
 
 mod day1;
 mod day2;
+mod day3;
 
 fn main() -> Result<(), std::io::Error> {
     let matches = Command::new("AoC 2024") // requires `cargo` feature
@@ -47,6 +48,7 @@ fn main() -> Result<(), std::io::Error> {
     match day {
         1 => day1::solve(part, &path),
         2 => day2::solve(part, &path),
+        3 => day3::solve(part, &path),
         _ => println!("Day not implemented."),
     }
 
